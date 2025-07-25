@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: users-prod
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=mi_base
+    username: sa
+    password: pass1234
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
