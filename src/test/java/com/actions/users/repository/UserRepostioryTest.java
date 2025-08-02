@@ -27,4 +27,12 @@ public class UserRepostioryTest {
      assertTrue(userFindById.isPresent());
      assertEquals("Angel", userFindById.get().getName());
     }
+    
+    @Test
+    public void findByEmailTest(){
+        UserModel user = new UserModel(null, "Angel", "Colin", "angel.antoni48@gmail.com");
+        UserModel userSave = repository.save(user);
+
+        assertEquals("angel.antoni48@gmail.com", userSave.getEmail());
+    }
 }
