@@ -8,4 +8,5 @@ import java.util.List;
 public interface UserService {
     ResponseEntity<UserModel> findById(String id);
     ResponseEntity<List<UserModel>> findAll();
+    ResponseEntity<UserModel> findByEmail(String email);
 }
