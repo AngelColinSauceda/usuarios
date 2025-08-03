@@ -21,6 +21,12 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
+    public ResponseEntity<UserModel> findByEmail(String email) {
+        return ResponseEntity.ok(repository.findByEmail(email)
+                .orElseThrow(() -> new IllegalArgumentException("User not found")));
+    }
+
+    @Override
     public ResponseEntity<List<UserModel>> findAll() {
         return ResponseEntity.ok(repository.findAll());
     }
